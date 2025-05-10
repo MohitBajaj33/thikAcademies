@@ -30,9 +30,12 @@ export default function Login() {
       const res = await loginAPI({ email, password });
       const userData = res?.data?.user;
       const role = userData?.role;
-
+      const token = res?.data.token
+      console.log(token);
+      
       if (userData && role) {
         localStorage.setItem("user", JSON.stringify(userData));
+        localStorage.setItem("token", JSON.stringify(token));
         window.dispatchEvent(new Event('userChanged'));
         toast.success('Login successful!');
         navigate(role === 'admin' ? '/admin' : '/user');
