@@ -12,7 +12,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:5174',
+  origin: 'https://thik-academies.vercel.app/',
   credentials: true
 }));
 app.use(express.json());
