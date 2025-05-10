@@ -1,5 +1,5 @@
 const sendMail = require("../utils/sendEmail");
-const User = require("../models/User");
+const User = require("../models/user");
 const OTPModel = require("../models/Otp");
 
 exports.sendMailToUser = async (req, res) => {
