@@ -25,7 +25,9 @@ app.use('/api/quiz', quizRoutes);
 app.use('/api/results', resultRoutes);
 app.use('/api/email', emailRoutes);
 
-
+app.get('/', (req,res)=>{
+  res.send("Server Run");
+})
 
 const connectDB = require('./config/db');
 connectDB();
