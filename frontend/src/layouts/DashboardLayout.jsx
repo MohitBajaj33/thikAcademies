@@ -59,7 +59,7 @@ export default function DashboardLayout() {
             className="text-red-400 hover:text-red-600 mt-6 text-left px-4 py-2"
             onClick={async () => {
               await logOutUserAPI();
-              localStorage.removeItem('user');
+              localStorage.clear();
               toast.success('Logout successfully!');
               window.location.href = '/';
             }}

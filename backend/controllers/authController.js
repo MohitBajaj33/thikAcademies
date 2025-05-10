@@ -63,6 +63,5 @@ exports.getAllUsers = async (req, res) => {
 
 exports.logout = async (req, res) => {
   res.clearCookie('token');
-  
   res.status(200).json({ msg: 'Logged out successfully' });
 };
