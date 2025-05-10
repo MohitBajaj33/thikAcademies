@@ -73,7 +73,6 @@ exports.logout = async (req, res) => {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         sameSite: process.env.NODE_ENV === "production"? "none" : "strict",
-  
-    });
+});
   res.status(200).json({ msg: 'Logged out successfully' });
 };
