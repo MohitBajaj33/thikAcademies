@@ -45,7 +45,7 @@ res.cookie("token", token, {
       sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
       expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
       maxAge: 60 * 60 * 24 * 1000, 
-    });
+});
 
   res.json({ user: { name: user.name, role: user.role, id: user._id}, token });
 };
