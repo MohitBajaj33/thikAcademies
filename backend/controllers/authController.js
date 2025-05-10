@@ -40,7 +40,7 @@ exports.login = async (req, res) => {
 
   const token = generateToken(user);
   res.cookie('token', token, { httpOnly: true });
-  res.json({ user: { name: user.name, role: user.role }, token });
+  res.json({ user: { name: user.name, role: user.role, id: user._id}, token });
 };
 
 // Get current user info

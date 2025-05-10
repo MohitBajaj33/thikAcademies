@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 
 exports.protect = async (req, res, next) => {
-  const token = req.cookies.token || localStorage.getItem("token");
+  const token = req.cookies.token;
   if (!token) return res.status(401).json({ msg: 'Not authorized' });
 
   try {

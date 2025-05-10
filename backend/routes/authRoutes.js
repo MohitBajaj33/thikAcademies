@@ -5,7 +5,7 @@ const { protect ,adminOnly} = require('../middleware/authMiddleware');
 
 router.post('/register', register);
 router.post('/login', login);
-router.get('/profile', getUser);
+router.get('/profile', protect, getUser);
 router.post('/logout',logout);
 
 // admin
